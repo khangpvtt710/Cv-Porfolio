@@ -2,6 +2,37 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Mặc định: bỏ gạch dưới và thay đổi màu chữ */
+a {
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    color: #ffffff;
+    /* Màu chữ mặc định (đen) */
+}
+
+a span{
+    color: #ffffff
+}
+
+
+
+/* Tạo pseudo-element trước liên kết, ví dụ: thêm icon hoặc văn bản */
+a::before {
+    content: '🔗';
+    /* Thêm một biểu tượng chuỗi liên kết */
+    margin-right: 5px;
+    /* Khoảng cách giữa icon và chữ */
+    font-size: 1.2em;
+    /* Kích thước icon */
+}
+
+/* Tạo pseudo-element sau liên kết, ví dụ: thêm dấu chấm hoặc ký tự */
+a::after {
+    content: '.';
+    /* Thêm dấu chấm sau liên kết */
+    margin-left: 5px;
+    /* Khoảng cách giữa chữ và dấu chấm */
+}
 * {
     margin: 0;
     padding: 0;
